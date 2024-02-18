@@ -1,5 +1,21 @@
 @import ../../sass/global
 
+.hero-section-container
+    @include set-as-header-background
+    @include set-background-image-from-file('./images/image-header-mobile.jpg')
+    height: 600px
+
+    +all-screen-bigger-than-mobile
+        height: 729px
+
+    +all-tablets
+        @include set-background-image-from-file('./images/image-header-tablet.jpg')
+        
+    +all-large-screen
+        @include set-background-image-from-file('./images/image-header-desktop.jpg')   
+
+
+
 .hero-section
     align-items: center
     justify-content: space-between
@@ -7,11 +23,11 @@
     +all-large-screen
         align-items: flex-start
 
-.featured-product-hero-info 
-    align-items: center
-    justify-content: center
-    margin-top: min(112px, 34.25%)
-    text-align: center
+   
+
+.hero-section .featured-product-info.featured-product-hero-info.col  
+    gap: 0
+    margin-top: min(112px, 34.25%) 
     
     +all-screen-bigger-than-mobile
         margin-top: 130px
@@ -20,25 +36,8 @@
         align-items: flex-start
         text-align: left
 
-.new-product-intro
-    color: $new-product-grey
-    letter-spacing: 10px
-
-.featured-product-hero-header
-    color: $white
-    letter-spacing: 1.29px
-    line-height: 40px
+.hero-section .featured-product-info.featured-product-hero-info.col .featured-product-hero-header.white-text
     padding: 28px 0 25px
-
-    +all-phone
-        font-size: 2.25rem
-    
-    +small-phone
-        font-size: 2rem
-        
-    +all-screen-bigger-than-mobile
-        letter-spacing: 2px
-        line-height: 58px
     
     +all-tablets
         padding: 35px 2em
@@ -47,10 +46,9 @@
         padding: 36px 58% 36px 0
 
 
-.featured-product-teaser-hero
-    line-height: 25px
-    padding: 0 9.78% 28px
-
+.hero-section .featured-product-info.featured-product-hero-info.col .featured-product-description-hero
+    padding: 0 9.17% 30px
+    
     +small-phone
         padding: 0 0 28px
 

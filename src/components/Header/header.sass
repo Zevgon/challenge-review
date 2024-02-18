@@ -1,35 +1,30 @@
 @import ../../sass/global
 
-header
+header.header-transparent-background
+    background: transparent 
     position: relative
-
-header .header-image-background
-    @include set-background-image-from-file('./images/image-header-mobile.jpg')
-    height: 600px
-
-    +all-screen-bigger-than-mobile
-        height: 729px
-
-    +all-tablets
-        @include set-background-image-from-file('./images/image-header-tablet.jpg')
-
-    +all-large-screen
-        @include set-background-image-from-file('./images/image-header-desktop.jpg')   
-
-header .header-black-background
-    background: $header-black-background
-
-
+    z-index: 9999
+    
 .mobile-header.row.main-container, .tablet-header.row.main-container, .desktop-header.row.main-container 
     align-items: center
     justify-content: space-between
     padding: 32.5px 0
      
+.shopping-cart-icon, .logo-icon, .hamburger-menu-icon
+    align-items: center
+    display: flex
+
+.logo-icon
+    a 
+        display: flex
+
+.shopping-cart-icon
+    justify-content: flex-end
 
 .mobile-header.row.main-container
-    
+
     +all-screen-bigger-than-mobile
-        display:  none
+        display: none
 
 
 .tablet-header.row.main-container
@@ -49,13 +44,17 @@ header .header-black-background
 
     +all-tablets
         display: none
+    
+    & .logo-icon, .shopping-cart-icon
+        +all-large-screen
+            width: 20%
 
 
 .tablet-header
-    & .icon-group
+    & .icon-group.row
         align-items: center
         justify-content: space-between
-        width: 201px
+        width: 285px
 
 
 .navigation-bar

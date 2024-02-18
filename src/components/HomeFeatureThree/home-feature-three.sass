@@ -1,0 +1,63 @@
+@import ../../sass/global
+
+.home-feature-three-container
+    display: flex
+    flex-direction: column
+    gap: 24px
+
+    +all-screen-bigger-than-mobile
+        flex-direction: row
+        align-items: center
+        gap: 11px
+        justify-content: center
+
+    +all-large-screen
+        gap: 30px
+    
+.home-feature-three-image-container
+    @include set-background-image-from-file("./images/image-earphones-yx1-mobile.jpg")
+    border-radius: 8px
+    height: 200px
+    width: 100%
+
+    +all-tablets
+        @include set-background-image-from-file("./images/image-earphones-yx1-tablet.jpg")
+        background-position: center
+        height: 320px
+    
+    +all-large-screen
+        @include set-background-image-from-file("./images/image-earphones-yx1-desktop.jpg")
+        height: 320px
+
+.home-feature-three-image
+    @include set-image-component-as-background
+    border-radius: 8px
+
+@import ../../sass/global
+
+.home-feature-three-text-container
+    padding: 50px 0 41px 25px
+
+    +all-screen-bigger-than-mobile
+        align-items: center
+        display: flex 
+        justify-content: center
+        padding: 106px 0
+        width: 100%
+    
+    +all-tablets
+        padding-left: 42px
+
+    +all-large-screen
+       padding-left: 96px
+
+.home-feature-three-container .featured-product-info.home-feature-three-info.col
+    align-items: flex-start
+    gap: 23px
+    text-align: left
+
+    
+    
+    
+
+        

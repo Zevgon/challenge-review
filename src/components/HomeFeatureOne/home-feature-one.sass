@@ -1,0 +1,93 @@
+@import ../../sass/global
+
+.home-feature-one
+    background: $dark-orange
+    border-radius: 8px
+    padding: 60px 0 50px
+    position: relative
+
+    +all-tablets
+        padding: 61px 0 64px
+    
+    +all-large-screen
+        padding: 136px 11.17% 118px 59.91%
+    
+svg.circle-pattern-svg
+    @include set-image-component-as-background
+
+    +all-large-screen
+        left: -135px
+
+.home-feature-one-image-and-text
+    align-items: center
+    display: flex
+    flex-direction: column
+    
+    +all-large-screen
+        flex-direction: row
+        justify-content: space-between
+
+.home-feature-one-image-container
+    height: auto
+    position: relative
+    max-width: 160px
+    width: 48.54%
+
+    +all-tablets   
+        max-width: 180px
+        width: 26.12%
+    
+    +all-large-screen
+        bottom: -2.7%
+        clip-path: rect(0 100% 96.5555% 0)
+        left: 12.61%
+        max-width: 375px
+        position: absolute
+        width: 33.78%
+    
+    +small-laptop
+        bottom: -2.2%
+
+.home-feature-one-image
+    height: 100%
+    width: 100%
+
+.featured-product-info.home-feature-one-info.col  
+    margin-top: 35px
+    position: relative
+    
+    +all-tablets
+        margin-top: 67px
+
+    +all-large-screen
+        align-items: flex-start
+        margin-top: 0
+        text-align: left
+
+.featured-product-info.col.home-feature-one-info .home-feature-one-header
+    padding: 0 24.46%
+
+    +tiny-phone
+        padding: 0 15%
+    
+    +all-tablets
+        padding: 0 217px
+
+    +all-large-screen
+        padding-left: 0
+
+.featured-product-info.col.home-feature-one-info .home-feature-one-description
+    margin-bottom: 0       
+    padding: 0 9.17%
+
+    +all-tablets
+        padding: 32px 26.71%
+
+    +medium-tablet
+        padding: 32px 28%
+
+    +all-large-screen
+        padding: 37px 0 31px
+
+    
+        
